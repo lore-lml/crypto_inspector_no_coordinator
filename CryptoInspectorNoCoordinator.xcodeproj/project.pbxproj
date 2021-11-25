@@ -13,6 +13,13 @@
 		01658411274E23EF0016046A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01658410274E23EF0016046A /* Assets.xcassets */; };
 		01658414274E23EF0016046A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01658412274E23EF0016046A /* LaunchScreen.storyboard */; };
 		01658421274E24880016046A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01658420274E24880016046A /* Color.xcassets */; };
+		01658425274E41520016046A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658424274E41520016046A /* HomeViewController.swift */; };
+		01658427274E42610016046A /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658426274E42610016046A /* Coin.swift */; };
+		0165842C274E99360016046A /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165842A274E99360016046A /* WatchListTableViewCell.swift */; };
+		01FF7C6A274FA20100407971 /* TopGainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FF7C69274FA20100407971 /* TopGainerTableViewCell.xib */; };
+		01FF7C6C274FABD900407971 /* WatchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FF7C6B274FABD900407971 /* WatchListTableViewCell.xib */; };
+		01FF7C74274FAE4200407971 /* TopGainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF7C73274FAE4200407971 /* TopGainerTableViewCell.swift */; };
+		01FF7C78274FB04800407971 /* CoinTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF7C77274FB04800407971 /* CoinTableViewCellProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		0165841D274E241A0016046A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = it; path = it.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0165841E274E241A0016046A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = it; path = it.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01658420274E24880016046A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		01658424274E41520016046A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		01658426274E42610016046A /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		0165842A274E99360016046A /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
+		01FF7C69274FA20100407971 /* TopGainerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopGainerTableViewCell.xib; sourceTree = "<group>"; };
+		01FF7C6B274FABD900407971 /* WatchListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchListTableViewCell.xib; sourceTree = "<group>"; };
+		01FF7C73274FAE4200407971 /* TopGainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGainerTableViewCell.swift; sourceTree = "<group>"; };
+		01FF7C77274FB04800407971 /* CoinTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCellProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 			children = (
 				0165841F274E24680016046A /* Supporting Files */,
 				0165840D274E23ED0016046A /* Main.storyboard */,
+				01658424274E41520016046A /* HomeViewController.swift */,
+				0165842E274E99450016046A /* Coin */,
 				01658410274E23EF0016046A /* Assets.xcassets */,
 				01658420274E24880016046A /* Color.xcassets */,
 				01658415274E23EF0016046A /* Info.plist */,
@@ -75,6 +91,35 @@
 				01658412274E23EF0016046A /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0165842E274E99450016046A /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				01658426274E42610016046A /* Coin.swift */,
+				01FF7C75274FB01500407971 /* WatchList */,
+				01FF7C76274FB01C00407971 /* TopGainer */,
+				01FF7C77274FB04800407971 /* CoinTableViewCellProtocol.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		01FF7C75274FB01500407971 /* WatchList */ = {
+			isa = PBXGroup;
+			children = (
+				0165842A274E99360016046A /* WatchListTableViewCell.swift */,
+				01FF7C6B274FABD900407971 /* WatchListTableViewCell.xib */,
+			);
+			path = WatchList;
+			sourceTree = "<group>";
+		};
+		01FF7C76274FB01C00407971 /* TopGainer */ = {
+			isa = PBXGroup;
+			children = (
+				01FF7C73274FAE4200407971 /* TopGainerTableViewCell.swift */,
+				01FF7C69274FA20100407971 /* TopGainerTableViewCell.xib */,
+			);
+			path = TopGainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +180,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FF7C6C274FABD900407971 /* WatchListTableViewCell.xib in Resources */,
 				01658414274E23EF0016046A /* LaunchScreen.storyboard in Resources */,
+				01FF7C6A274FA20100407971 /* TopGainerTableViewCell.xib in Resources */,
 				01658421274E24880016046A /* Color.xcassets in Resources */,
 				01658411274E23EF0016046A /* Assets.xcassets in Resources */,
 				0165840F274E23ED0016046A /* Main.storyboard in Resources */,
@@ -149,8 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0165842C274E99360016046A /* WatchListTableViewCell.swift in Sources */,
+				01FF7C78274FB04800407971 /* CoinTableViewCellProtocol.swift in Sources */,
+				01FF7C74274FAE4200407971 /* TopGainerTableViewCell.swift in Sources */,
 				01658408274E23ED0016046A /* AppDelegate.swift in Sources */,
 				0165840A274E23ED0016046A /* SceneDelegate.swift in Sources */,
+				01658427274E42610016046A /* Coin.swift in Sources */,
+				01658425274E41520016046A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

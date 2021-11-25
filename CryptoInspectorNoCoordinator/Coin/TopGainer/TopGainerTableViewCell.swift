@@ -44,6 +44,9 @@ extension TopGainerTableViewCell {
     func addBorder(toSide side: ViewSide, withColor color: CGColor?, andThickness thickness: CGFloat) {
         
         let alreadyExist = borders[side.order] != nil
+        if alreadyExist{
+            return
+        }
         let border = alreadyExist ? borders[side.order]! : CALayer()
         border.backgroundColor = color
         
@@ -55,10 +58,8 @@ extension TopGainerTableViewCell {
         case .Bottom: border.frame = CGRect(x: frame.minX + 10, y: frame.maxY-1, width: frame.width, height: thickness); break
         }
         
-        if !alreadyExist{
-            layer.addSublayer(border)
-            borders[side.order] = border
-        }
+        layer.addSublayer(border)
+        borders[side.order] = border
     }
     
     func setBorder(of side: ViewSide, withVisibility value: Bool){

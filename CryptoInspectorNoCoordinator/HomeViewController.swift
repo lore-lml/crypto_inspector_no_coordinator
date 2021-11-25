@@ -87,12 +87,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-                
+        headerView.backgroundColor = UIColor(named: "Text")
+        
         let label = UILabel()
         label.frame = CGRect.init(x: 10, y: 0, width: headerView.frame.width-10, height: headerView.frame.height-20)
-        label.text = section == 0 ? "Watch List ❤️" : "Top Gainers 🚀"
+        label.text = section == 0 ? "Watch List ❤️‍🔥" : "Top Gainers 🚀"
         label.font = .systemFont(ofSize: 16)
-        label.textColor = UIColor(named: "Warning")
+        label.textColor = UIColor(named: "Accent")
         
         headerView.addSubview(label)
         

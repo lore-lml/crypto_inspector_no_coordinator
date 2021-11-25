@@ -37,7 +37,7 @@ public class RequestFetcher{
     }
     
     public static func fetchTopGainers(completion: @escaping ([Coin]) -> ()){
-        guard let url = URL(string: "https://data.messari.io/api/v2/assets?fields=slug,symbol,metrics/market_data&limit=5") else{
+        guard let url = URL(string: "https://data.messari.io/api/v2/assets?fields=slug,symbol,metrics/market_data&limit=10") else{
             fatalError("Wrong URL")
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

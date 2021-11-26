@@ -23,21 +23,27 @@ protocol CoinTableViewCellProtocol: AnyObject{
 extension CoinTableViewCellProtocol{
     
     func downloadIcon(ofCoin coin: Coin){
-        RequestFetcher.fetchLogo(ofCoin: coin) { data, response, error in
-                guard let data = data, error == nil else { return }
-                // always update the UI from the main thread
-                DispatchQueue.main.async() { [weak self] in
+        CoinFetcher.shared.fetchLogo(ofCoin: coin) { data in
+    
+            DispatchQueue.main.async() { [weak self] in
+                if let data = data{
                     self?.icon.image = UIImage(data: data) ?? UIImage(systemName: "bitcoinsign.circle.fill")
-                    self?.icon.isHidden = false
+                }else{
+                    self?.icon.image = UIImage(systemName: "bitcoinsign.circle.fill")
                 }
+                
+                self?.icon.isHidden = false
             }
+        }
     }
     
     func set(from coin: Coin){
         icon.isHidden = true
         name.text = coin.name
         ticker.text = coin.ticker
+        
         downloadIcon(ofCoin: coin)
+        
         price.text = coin.priceString
         gain24h.text = coin.gain24hString
         gain24h.textColor = getColor(for: coin.gain24h)

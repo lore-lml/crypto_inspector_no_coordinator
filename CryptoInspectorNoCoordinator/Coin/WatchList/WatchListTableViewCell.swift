@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WatchListTableViewCell: UITableViewCell, CoinTableViewCellProtocol {
+@IBDesignable class WatchListTableViewCell: UITableViewCell, CoinTableViewCellProtocol {
     
     static let nibId: String = "WatchListTableViewCell"
     static let cellId: String = "watchlistCell"
@@ -18,17 +18,4 @@ class WatchListTableViewCell: UITableViewCell, CoinTableViewCellProtocol {
     @IBOutlet weak var gain24h: UILabel!
     @IBOutlet weak var icon: UIImageView!
     
-}
-
-@IBDesignable extension UIView {
-    @IBInspectable var cornerRadius: CGFloat {
-        get { return layer.cornerRadius }
-        set {
-              layer.cornerRadius = newValue
-
-              // If masksToBounds is true, subviews will be
-              // clipped to the rounded corners.
-              layer.masksToBounds = (newValue > 0)
-        }
-    }
 }

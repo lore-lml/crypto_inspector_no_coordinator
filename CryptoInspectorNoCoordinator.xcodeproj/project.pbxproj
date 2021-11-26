@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015594852750E7B7006AC442 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594842750E7B7006AC442 /* CardView.swift */; };
+		015594872750EC95006AC442 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594862750EC95006AC442 /* Environment.swift */; };
 		01658408274E23ED0016046A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658407274E23ED0016046A /* AppDelegate.swift */; };
 		0165840A274E23ED0016046A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658409274E23ED0016046A /* SceneDelegate.swift */; };
 		0165840F274E23ED0016046A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0165840D274E23ED0016046A /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		015594842750E7B7006AC442 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		015594862750EC95006AC442 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		01658404274E23ED0016046A /* CryptoInspectorNoCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoInspectorNoCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01658407274E23ED0016046A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01658409274E23ED0016046A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,9 +120,11 @@
 				0165841F274E24680016046A /* Supporting Files */,
 				0165840D274E23ED0016046A /* Main.storyboard */,
 				01658424274E41520016046A /* HomeViewController.swift */,
+				015594842750E7B7006AC442 /* CardView.swift */,
 				0165842E274E99450016046A /* Coin */,
 				01658410274E23EF0016046A /* Assets.xcassets */,
 				01658420274E24880016046A /* Color.xcassets */,
+				015594862750EC95006AC442 /* Environment.swift */,
 				01658415274E23EF0016046A /* Info.plist */,
 			);
 			path = CryptoInspectorNoCoordinator;
@@ -289,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015594852750E7B7006AC442 /* CardView.swift in Sources */,
+				015594872750EC95006AC442 /* Environment.swift in Sources */,
 				0165842C274E99360016046A /* WatchListTableViewCell.swift in Sources */,
 				01FF7C78274FB04800407971 /* CoinTableViewCellProtocol.swift in Sources */,
 				01FF7C74274FAE4200407971 /* TopGainerTableViewCell.swift in Sources */,

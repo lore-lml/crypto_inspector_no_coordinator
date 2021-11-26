@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RequestFetcher.fetchTopGainers{
+        CoinFetcher.shared.fetchCoinInfo(limit: 10){
             self.topGainers = $0
             DispatchQueue.main.async { [weak self] in
                 self?.watchListTableView.reloadData()
@@ -87,48 +87,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-        headerView.backgroundColor = UIColor(named: "Text")
+        headerView.backgroundColor = UIColor.background
         
         let label = UILabel()
         label.frame = CGRect.init(x: 10, y: 0, width: headerView.frame.width-10, height: headerView.frame.height-20)
         label.text = section == 0 ? "Watch List ❤️‍🔥" : "Top Gainers 🚀"
         label.font = .systemFont(ofSize: 16)
-        label.textColor = UIColor(named: "Accent")
+        label.textColor = UIColor.accent
         
         headerView.addSubview(label)
         
         return headerView
     }
 }
-
-extension Coin{
-    var icon: UIImage{
-        return UIImage(named: self.name.lowercased()) ?? UIImage(systemName: "bitcoinsign.circle.fill")!
-    }
-    
-    var priceString: String{
-        return String(format: "$ %.2f", price)
-    }
-    
-    var gain24hString: String{
-        let sign = gain24h > 0 ? "+":""
-        return "\(sign)\(String(format: "%.2f", gain24h)) %"
-    }
-}
-
-extension WatchListTableViewCell{
-    func set(from coin: Coin){
-        name.text = coin.name
-        ticker.text = coin.ticker
-        price.text = coin.priceString
-        gain24h.text = coin.gain24hString
-        gain24h.textColor = getColor(for: coin.gain24h)
-        icon.image = coin.icon
-    }
-    
-    private func getColor(for gain24h: Double) -> UIColor?{
-        return gain24h > 0 ? UIColor(named: "Success") : UIColor(named: "Danger")
-    }
-}
-
-

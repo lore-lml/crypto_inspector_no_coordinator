@@ -22,7 +22,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" name="Text"/>
                         <constraints>
                             <constraint firstItem="Ttr-CT-8Sf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KKU-nu-Kyn"/>
                             <constraint firstItem="Ttr-CT-8Sf" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="25:112" id="bgJ-Je-XMt"/>
@@ -37,8 +37,8 @@
     </scenes>
     <resources>
         <image name="swiftLogo" width="170.66667175292969" height="170.66667175292969"/>
-        <namedColor name="Background">
-            <color red="0.13333333333333333" green="0.15686274509803921" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Text">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.49997377395629883" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

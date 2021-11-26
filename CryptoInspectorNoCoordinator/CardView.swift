@@ -9,35 +9,23 @@ import UIKit
 
 @IBDesignable class CardView: UIView {
     
-    @IBInspectable var cornerradius: CGFloat = 5
+    @IBInspectable var cornerRadius: CGFloat = 5
     @IBInspectable var shadowOffsetWidth: CGFloat = 0
     @IBInspectable var shadowOffsetHeight: CGFloat = 5
     @IBInspectable var shadowColor: UIColor = .black
     @IBInspectable var shadowOpacity: CGFloat = 0.5
+    @IBInspectable var isRounded: Bool = false
     
     override func layoutSubviews() {
-        layer.cornerRadius = 5
+        let cRadius = isRounded ? frame.height/2 : cornerRadius
+        layer.cornerRadius = cRadius
         layer.shadowOffset = CGSize(width: shadowOffsetWidth, height: shadowOffsetHeight)
         layer.shadowColor = shadowColor.cgColor
         layer.shadowOpacity = Float(shadowOpacity)
         
-        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cRadius)
         layer.shadowPath = shadowPath.cgPath
         
     }
 
-}
-
-@IBDesignable extension UIView {
-    
-    @IBInspectable var cornerRadius: CGFloat {
-        get { return layer.cornerRadius }
-        set {
-              layer.cornerRadius = newValue
-
-              // If masksToBounds is true, subviews will be
-              // clipped to the rounded corners.
-              layer.masksToBounds = (newValue > 0)
-        }
-    }
 }

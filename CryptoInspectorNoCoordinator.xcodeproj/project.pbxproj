@@ -11,6 +11,7 @@
 		015594872750EC95006AC442 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594862750EC95006AC442 /* Environment.swift */; };
 		015594892751284E006AC442 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594882751284E006AC442 /* Storage.swift */; };
 		0155948B27512B2B006AC442 /* JsonStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155948A27512B2B006AC442 /* JsonStorageAdapter.swift */; };
+		0155949027514D45006AC442 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155948F27514D45006AC442 /* RoundedImageView.swift */; };
 		01658408274E23ED0016046A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658407274E23ED0016046A /* AppDelegate.swift */; };
 		0165840A274E23ED0016046A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658409274E23ED0016046A /* SceneDelegate.swift */; };
 		0165840F274E23ED0016046A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0165840D274E23ED0016046A /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		015594862750EC95006AC442 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		015594882751284E006AC442 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		0155948A27512B2B006AC442 /* JsonStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStorageAdapter.swift; sourceTree = "<group>"; };
+		0155948F27514D45006AC442 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		01658404274E23ED0016046A /* CryptoInspectorNoCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoInspectorNoCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01658407274E23ED0016046A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01658409274E23ED0016046A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				0165840D274E23ED0016046A /* Main.storyboard */,
 				01658424274E41520016046A /* HomeViewController.swift */,
 				015594842750E7B7006AC442 /* CardView.swift */,
+				0155948F27514D45006AC442 /* RoundedImageView.swift */,
 				0165842E274E99450016046A /* Coin */,
 				01658410274E23EF0016046A /* Assets.xcassets */,
 				01658420274E24880016046A /* Color.xcassets */,
@@ -317,6 +320,7 @@
 				01658408274E23ED0016046A /* AppDelegate.swift in Sources */,
 				0165840A274E23ED0016046A /* SceneDelegate.swift in Sources */,
 				01658425274E41520016046A /* HomeViewController.swift in Sources */,
+				0155949027514D45006AC442 /* RoundedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,22 +7,23 @@
 
 import Foundation
 
-public struct Coin{
+public struct Coin: Codable{
     public var name: String
     public var ticker: String
     public var price: Double
     public var gain24h: Double
     
     public init(name: String, ticker: String, price: Double, gain24h: Double){
-        self.name = name.capitalized
+        self.name = name.capitalized.replacingOccurrences(of: "-", with: " ")
         self.ticker = ticker.uppercased()
         self.price = price
         self.gain24h = gain24h
     }
     
     public var priceString: String{
-        var doubleString = String(format: "%.2f", price).replacingOccurrences(of: ".", with: ",")
-        let numberOfIntegerDigit: Int = doubleString.count - 3
+        let precision = price < 1 ? 4:2
+        var doubleString = String(format: "%.\(precision)f", price).replacingOccurrences(of: ".", with: ",")
+        let numberOfIntegerDigit: Int = doubleString.count - (precision+1)
         if numberOfIntegerDigit < 3{
             return "$ \(doubleString)"
         }

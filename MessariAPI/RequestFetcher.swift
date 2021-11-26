@@ -40,13 +40,24 @@ private struct MessariApiResponse: Decodable{
 }
 
 public class CoinFetcher{
+    private static var coinFolder: String = "coins_info"
+    private static var coinLogoKey: String = "coin_logo"
     
     private var logos: [String:Data]
     private var coins: [Coin]
     private var lastFetchingTime: Int?
+    private var jsonStorage: JsonStorageAdapter
     
     private init(){
-        logos = [:]
+        let storage = DiskStorage(folder: CoinFetcher.coinFolder)
+        jsonStorage = JsonStorageAdapter(storage: storage)
+        
+        do{
+            logos = try jsonStorage.fetch(for: CoinFetcher.coinLogoKey)
+        }catch{
+            logos = [:]
+        }
+        
         coins = []
     }
     
@@ -73,6 +84,11 @@ public class CoinFetcher{
             }
             self?.logos[coin.ticker] = data
             completion(data)
+            do{
+                try self?.jsonStorage.save(self?.logos, for: CoinFetcher.coinLogoKey)
+            }catch let e{
+                print(e)
+            }
         }.resume()
     }
     

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		015594852750E7B7006AC442 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594842750E7B7006AC442 /* CardView.swift */; };
 		015594872750EC95006AC442 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594862750EC95006AC442 /* Environment.swift */; };
+		015594892751284E006AC442 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015594882751284E006AC442 /* Storage.swift */; };
+		0155948B27512B2B006AC442 /* JsonStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0155948A27512B2B006AC442 /* JsonStorageAdapter.swift */; };
 		01658408274E23ED0016046A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658407274E23ED0016046A /* AppDelegate.swift */; };
 		0165840A274E23ED0016046A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01658409274E23ED0016046A /* SceneDelegate.swift */; };
 		0165840F274E23ED0016046A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0165840D274E23ED0016046A /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		015594842750E7B7006AC442 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		015594862750EC95006AC442 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		015594882751284E006AC442 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		0155948A27512B2B006AC442 /* JsonStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStorageAdapter.swift; sourceTree = "<group>"; };
 		01658404274E23ED0016046A /* CryptoInspectorNoCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoInspectorNoCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01658407274E23ED0016046A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01658409274E23ED0016046A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0155948C27512B30006AC442 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				015594882751284E006AC442 /* Storage.swift */,
+				0155948A27512B2B006AC442 /* JsonStorageAdapter.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		016583FB274E23ED0016046A = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 				017A08A7274FDFEB00F6A534 /* MessariAPI.h */,
 				01658426274E42610016046A /* Coin.swift */,
 				017A08B1274FE01200F6A534 /* RequestFetcher.swift */,
+				0155948C27512B30006AC442 /* Storage */,
 			);
 			path = MessariAPI;
 			sourceTree = "<group>";
@@ -312,6 +326,8 @@
 			files = (
 				017A08B3274FE8BB00F6A534 /* Coin.swift in Sources */,
 				017A08B2274FE01200F6A534 /* RequestFetcher.swift in Sources */,
+				015594892751284E006AC442 /* Storage.swift in Sources */,
+				0155948B27512B2B006AC442 /* JsonStorageAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
